@@ -1,0 +1,85 @@
+.currency {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 110px;
+	margin-bottom: 15px;
+	background-color: rgba(31,33,39,.40);
+	box-shadow: 0 0 15px 0 rgba(0,0,0,0.21);
+}
+.currency .rank {
+	  width: 80px;
+    height: 100%;
+    background-color: #5B6BC6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 35px;
+}
+.currency .rank h2{
+	color: white;
+	position: relative;
+}
+.currency .logo {
+	margin-right: 30px;
+}
+.currency .logo img {
+	width: 60px;
+	height: 60px;
+}
+.currency .name {
+	width: 175px;
+	margin-right: 25px;
+}
+.currency .name .short {
+	font-size: 24px;
+	color: #797990;
+}
+.currency .price {
+	margin-right: 40px;
+	width: 120px;
+}
+.currency .price h2 {
+	color: #F1A044;
+}
+.currency .change {
+	margin-right: 40px;
+}
+.currency.up .change h2 {
+	color: #38E86C;
+}
+.currency.up .change h2::before {
+	content: url(/images/up.svg);
+	display: inline-block;
+	padding-right: 8px;
+}
+.currency.down .change h2{
+	color: #FF3F57;
+}
+.currency.down .change h2::before {
+	content: url(/images/down.svg);
+	display: inline-block;
+	padding-right: 8px;
+	vertical-align: middle;
+	padding-bottom: 4px;
+}
+.currency .label {
+	color: #797990;
+	font-size: 14px;
+}
+.currency .change, .currency .price {
+	text-align: center;
+}
+.currency .market {
+	text-align: center;
+	margin-right: 40px;
+}
+.currency .market h2 {
+	color: #5B6BC6;
+}
+.currency .volume {
+	text-align: center;
+}
+.currency .volume h2 {
+	color: #5B6BC6;
+}
