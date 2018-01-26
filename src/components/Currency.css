@@ -10,7 +10,8 @@
 .currency .rank {
 	  width: 80px;
     height: 100%;
-    background-color: #5B6BC6;
+    background-image: linear-gradient(#5B6BC6, #FF5AA9);
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;

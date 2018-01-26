@@ -1,9 +1,8 @@
 .header {
-	padding: 0 2em;
 	display: flex;
-	margin: 25px auto;
 	justify-content: space-between;
-	align-items: center;
+  align-items: center;
+  height: 140px;
 	/*background-image: linear-gradient(-15deg, #9D6883 0%, #62516C 30%, #61516C 30%, #4A4863 63%);*/
 	/*box-shadow: 0 0 15px 0 rgba(0,0,0,0.21);*/
 }
