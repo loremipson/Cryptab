@@ -5,29 +5,15 @@ import socketClient from 'socket.io-client';
 
 class Main extends Component {
   componentDidMount() {
-    fetch('https://coincap.io/front')
-      .then(res => res.json())
-      .then(data => {
-        const obj = {};
+    const io = socketClient('https://coincap.io');
+    io.on('trades', trade => {
+      const { cap24hrChange, mktcap, perc, price, supply, usdVolume, short } = trade.msg;
+      this.props.updateCurrency(cap24hrChange, mktcap, perc, price, supply, usdVolume, short);
+    });
 
-        for (let i = 0; i <= 99; i++) {
-          obj[data[i].short] = data[i];
-        }
-
-        localStorage.setItem('cachedCurrencies', JSON.stringify(obj));
-      })
-      .then(() => {
-        const io = socketClient('https://coincap.io');
-        io.on('trades', trade => {
-          const { cap24hrChange, mktcap, perc, price, supply, usdVolume, short } = trade.msg;
-          this.props.updateCurrency(cap24hrChange, mktcap, perc, price, supply, usdVolume, short);
-        });
-
-        setInterval(() => {
-          console.log('updating localStorage');
-          localStorage.setItem('cachedCurrencies', JSON.stringify(this.props.currencies));
-        }, 10000);
-      });
+    setInterval(() => {
+      localStorage.setItem('cachedCurrencies', JSON.stringify(this.props.currencies));
+    }, 5000);
   }
   buildCurrencies() {
     this.props.currencies.map((currency, i) => <Currency />);
