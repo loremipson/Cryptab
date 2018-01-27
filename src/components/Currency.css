@@ -1,3 +1,25 @@
+@keyframes priceUp {
+  0% {
+    background-color: rgba(31,33,39,.40);
+  }
+  50% {
+    background-color: rgba(56, 232, 108, .40);
+  }
+  100% {
+    background-color: rgba(31,33,39,.40);
+  }
+}
+@keyframes priceDown {
+  0% {
+    background-color: rgba(31,33,39,.40);
+  }
+  50% {
+    background-color: rgba(255, 63, 87, .40);
+  }
+  100% {
+    background-color: rgba(31,33,39,.40);
+  }
+}
 .currency {
 	display: flex;
 	align-items: center;
@@ -10,7 +32,7 @@
 .currency .rank {
 	  width: 80px;
     height: 100%;
-    background-image: linear-gradient(#5B6BC6, #FF5AA9);
+    background-image: linear-gradient(#5B6BC6, #C85FB2);
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -63,6 +85,12 @@
 	padding-right: 8px;
 	vertical-align: middle;
 	padding-bottom: 4px;
+}
+.currency.price_up {
+  animation: .8s priceUp;
+}
+.currency.price_down {
+  animation: .8s priceDown;
 }
 .currency .label {
 	color: #797990;

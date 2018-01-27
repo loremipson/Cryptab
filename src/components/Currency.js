@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import './Currency.css';
 
 class Currency extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { status: 'none' };
+  }
+  componentWillReceiveProps(newProps) {
+    const oldPrice = this.props.currencies[this.props.short].price;
+    const newPrice = newProps.currencies[this.props.short].price;
+
+    if (newPrice > oldPrice) {
+      this.setState({ status: 'up' });
+    } else if (newPrice < oldPrice) {
+      this.setState({ status: 'down' });
+    }
+  }
   render() {
     const numFormat = num => {
       const thousand = 1000;
@@ -29,10 +44,12 @@ class Currency extends Component {
 
     // const rank = this.props.index + 1;
     return (
-      <div className={`currency ${cap24hrChange > 0 ? 'up' : 'down'}`}>
+      <div className={`currency ${cap24hrChange > 0 ? 'up' : 'down'} price_${this.state.status}`}>
         <div className="rank">{<h2>{this.props.rank}</h2>}</div>
         <div className="logo">
-          {/* <img src={`https://files.coinmarketcap.com/static/img/coins/128x128/${short}.png`} /> */}
+          <img
+            src={`https://files.coinmarketcap.com/static/img/coins/128x128/${long.replace(' ', '-').toLowerCase()}.png`}
+          />
         </div>
         <div className="name">
           <h2 className="full">
