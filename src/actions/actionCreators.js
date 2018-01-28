@@ -10,3 +10,10 @@ export const updateCurrency = (cap24hrChange, mktcap, perc, price, supply, usdVo
     usdVolume,
   };
 };
+
+export const toggleTheme = bool => {
+  return {
+    type: 'TOGGLE_THEME',
+    bool,
+  };
+};

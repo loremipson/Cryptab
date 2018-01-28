@@ -6,6 +6,7 @@ import Main from './Main';
 const mapStateToProps = state => {
   return {
     currencies: state.currencies,
+    lightTheme: state.lightTheme,
   };
 };
 
