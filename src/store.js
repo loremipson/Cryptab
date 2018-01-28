@@ -1,11 +1,16 @@
-import { createStore, compose } from 'redux';
+import { createStore } from 'redux';
 import { batchedSubscribe } from 'redux-batched-subscribe';
 import { unstable_batchedUpdates } from 'react-dom';
 
 import rootReducer from './reducers/index';
 
+const storedTheme = localStorage.getItem('lightTheme');
+
 const defaultState = {
   currencies: {},
+  lightTheme: {
+    enabled: storedTheme ? JSON.parse(storedTheme) : false,
+  },
 };
 
 const now = Date.now();
