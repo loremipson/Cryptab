@@ -49,6 +49,7 @@ class Currency extends Component {
         <div className="logo">
           <img
             src={`https://files.coinmarketcap.com/static/img/coins/128x128/${long.replace(' ', '-').toLowerCase()}.png`}
+            alt={`${long} Logo`}
           />
         </div>
         <div className="name">
@@ -67,10 +68,7 @@ class Currency extends Component {
         <div className="change">
           <span className="label">Change (24h)</span>
           <a href={`https://coinmarketcap.com/currencies/${short}/#charts`} target="_blank">
-            <h2>
-              <img id="trend" src="//:0" />
-              {cap24hrChange}%
-            </h2>
+            <h2>{cap24hrChange}%</h2>
           </a>
         </div>
         <div className="market">
