@@ -20,6 +20,28 @@
     background-color: rgba(31,33,39,.40);
   }
 }
+@keyframes priceUpLight {
+  0% {
+    background-color: rgba(255,255,255,.30);
+  }
+  50% {
+    background-color: rgba(56, 232, 108, .40);
+  }
+  100% {
+    background-color: rgba(255,255,255,.30);
+  }
+}
+@keyframes priceDownLight {
+  0% {
+    background-color: rgba(255,255,255,.30);
+  }
+  50% {
+    background-color: rgba(255, 63, 87, .40);
+  }
+  100% {
+    background-color: rgba(255,255,255,.30);
+  }
+}
 .currency {
 	display: flex;
 	align-items: center;
@@ -38,6 +60,9 @@
     align-items: center;
     justify-content: center;
     margin-right: 35px;
+}
+.light .currency .rank {
+  background-image: linear-gradient(rgba(91, 107, 198, .5), rgba(200, 95, 178, .5));
 }
 .currency .rank h2{
 	color: white;
@@ -84,13 +109,18 @@
 	display: inline-block;
 	padding-right: 8px;
 	vertical-align: middle;
-	padding-bottom: 4px;
 }
 .currency.price_up {
   animation: .8s priceUp;
 }
 .currency.price_down {
   animation: .8s priceDown;
+}
+.light .currency.price_up {
+  animation: .8s priceUpLight;
+}
+.light .currency.price_down {
+  animation: .8s priceDownLight;
 }
 .currency .label {
 	color: #797990;

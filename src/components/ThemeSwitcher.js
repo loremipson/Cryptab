@@ -8,6 +8,14 @@ export default class ThemeSwitcher extends Component {
     localStorage.setItem('lightTheme', !bool);
   }
   render() {
-    return <input type="checkbox" onChange={this.toggleTheme.bind(this)} className="switch" id="switch-1" />;
+    return (
+      <input
+        type="checkbox"
+        onChange={this.toggleTheme.bind(this)}
+        className="switch"
+        id="switch-1"
+        checked={this.props.lightTheme.enabled}
+      />
+    );
   }
 }
