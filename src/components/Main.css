@@ -115,10 +115,19 @@
 
 /* CURRENCY */
 .light .currency {
-	background-color: rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.3);
 }
 .light .currency .name .full {
 	color: #5B6BC6;
+}
+
+.light .ad {
+  background-color: rgba(255,255,255,.3);
+}
+
+.light .ad p,
+.light .ad h3 {
+  color: #5b6bc6;
 }
 
 /* BUTTON */
