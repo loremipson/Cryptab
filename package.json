@@ -1,6 +1,6 @@
 {
   "name": "cryptab",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
