@@ -42,44 +42,43 @@ class Currency extends Component {
     };
     const { cap24hrChange, mktcap, price, long, usdVolume, short } = this.props.currencies[this.props.short];
 
+    const url = long.replace(' ', '-').toLowerCase();
+
     // const rank = this.props.index + 1;
     return (
       <div className={`currency ${cap24hrChange > 0 ? 'up' : 'down'} price_${this.state.status}`}>
         <div className="rank">{<h2>{this.props.rank}</h2>}</div>
         <div className="logo">
-          <img
-            src={`https://files.coinmarketcap.com/static/img/coins/128x128/${long.replace(' ', '-').toLowerCase()}.png`}
-            alt={`${long} Logo`}
-          />
+          <img src={`https://files.coinmarketcap.com/static/img/coins/128x128/${url}.png`} alt={`${long} Logo`} />
         </div>
         <div className="name">
           <h2 className="full">
-            <a href={`https://coinmarketcap.com/currencies/${short}/`} target="_blank">
+            <a href={`https://coinmarketcap.com/currencies/${url}/`} target="_blank">
               {long}
             </a>
           </h2>
           <span className="short">{short}</span>
         </div>
         <div className="price">
-          <a href={`https://coinmarketcap.com/currencies/${short}/#markets`} target="_blank">
+          <a href={`https://coinmarketcap.com/currencies/${url}/#markets`} target="_blank">
             <h2>${roundPrice(price)}</h2>
           </a>
         </div>
         <div className="change">
           <span className="label">Change (24h)</span>
-          <a href={`https://coinmarketcap.com/currencies/${short}/#charts`} target="_blank">
+          <a href={`https://coinmarketcap.com/currencies/${url}/#charts`} target="_blank">
             <h2>{cap24hrChange}%</h2>
           </a>
         </div>
         <div className="market">
           <span className="label">Market Cap</span>
-          <a href={`https://coinmarketcap.com/currencies/${short}/`} target="_blank">
+          <a href={`https://coinmarketcap.com/currencies/${url}/`} target="_blank">
             <h2>${numFormat(mktcap)}</h2>
           </a>
         </div>
         <div className="volume">
           <span className="label">Volume (24h)</span>
-          <a href={`https://coinmarketcap.com/currencies/${short}/#markets`} target="_blank">
+          <a href={`https://coinmarketcap.com/currencies/${url}/#markets`} target="_blank">
             <h2>${numFormat(usdVolume)}</h2>
           </a>
         </div>
