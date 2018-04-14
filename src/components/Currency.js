@@ -42,14 +42,14 @@ class Currency extends Component {
     };
     const { cap24hrChange, mktcap, price, long, usdVolume, short } = this.props.currencies[this.props.short];
 
-    const url = long.replace(' ', '-').toLowerCase();
+    const url = short.toLowerCase();
 
     // const rank = this.props.index + 1;
     return (
       <div className={`currency ${cap24hrChange > 0 ? 'up' : 'down'} price_${this.state.status}`}>
         <div className="rank">{<h2>{this.props.rank}</h2>}</div>
         <div className="logo">
-          <img src={`https://files.coinmarketcap.com/static/img/coins/128x128/${url}.png`} alt={`${long} Logo`} />
+          <img src={`/images/icons/${url}.svg`} alt={`${long} Logo`} />
         </div>
         <div className="name">
           <h2 className="full">
