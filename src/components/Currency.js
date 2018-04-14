@@ -42,7 +42,12 @@ class Currency extends Component {
     };
     const { cap24hrChange, mktcap, price, long, usdVolume, short } = this.props.currencies[this.props.short];
 
-    const url = short.toLowerCase();
+    let url = short.toLowerCase();
+
+    // Fix any mismatched icons here..
+    if (url === 'iot') {
+      url = 'miota';
+    }
 
     // const rank = this.props.index + 1;
     return (
