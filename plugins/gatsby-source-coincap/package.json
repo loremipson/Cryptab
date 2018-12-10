@@ -1,0 +1,9 @@
+{
+  "name": "gatsby-source-coincap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}

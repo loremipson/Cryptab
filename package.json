@@ -1,20 +1,32 @@
 {
   "name": "cryptab",
-  "version": "2.2.2",
-  "private": true,
+  "version": "3.0.0-alpha.0",
+  "main": "index.js",
+  "repository": "git@github.com:loremipson/cryptab.git",
+  "author": "Tyler Ipson <tyler.ipson@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-scripts": "1.1.0",
-    "redux": "^3.7.2",
-    "redux-batched-subscribe": "^0.1.6",
-    "socket.io-client": "^2.0.4"
+    "@emotion/core": "^10.0.4",
+    "@emotion/styled": "^10.0.4",
+    "cryptocurrency-icons": "^0.9.3",
+    "emotion": "^10.0.4",
+    "emotion-server": "^10.0.4",
+    "emotion-theming": "^10.0.4",
+    "gatsby": "^2.0.64",
+    "gatsby-image": "^2.0.22",
+    "gatsby-plugin-emotion": "^3.0.1",
+    "gatsby-plugin-manifest": "^2.0.11",
+    "gatsby-plugin-offline": "^2.0.19",
+    "gatsby-plugin-react-helmet": "^3.0.4",
+    "gatsby-plugin-sharp": "^2.0.15",
+    "gatsby-source-filesystem": "^2.0.11",
+    "gatsby-transformer-sharp": "^2.1.9",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
+    "socket.io-client": "^2.2.0",
+    "typeface-rubik": "^0.0.54",
+    "ws": "^6.1.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  "devDependencies": {}
 }
